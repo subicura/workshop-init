@@ -38,7 +38,7 @@ service sshd reload
 apt-get -y update
 apt-get -y install nodejs npm
 npm install -g wetty
-curl https://gist.githubusercontent.com/subicura/9058671c16e2abd36533fea2798886b0/raw/7f097962188d8e1a90fac1e8383e6087b1898a2a/wetty.service -o /lib/systemd/system/wetty.service
+curl https://gist.githubusercontent.com/subicura/9058671c16e2abd36533fea2798886b0/raw/e5d249612711b14c9c8f44798dea1368395e86a9/wetty.service -o /lib/systemd/system/wetty.service
 systemctl start wetty
 systemctl enable wetty
 ```

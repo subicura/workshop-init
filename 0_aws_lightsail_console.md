@@ -36,7 +36,7 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_c
 echo "ubuntu:1q2w3e4r" | chpasswd
 service sshd reload
 apt-get -y update
-apt-get -y install nodejs npm
+DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs npm
 npm install -g wetty
 curl https://gist.githubusercontent.com/subicura/9058671c16e2abd36533fea2798886b0/raw/e5d249612711b14c9c8f44798dea1368395e86a9/wetty.service -o /lib/systemd/system/wetty.service
 systemctl start wetty

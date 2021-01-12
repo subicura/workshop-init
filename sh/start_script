@@ -1,5 +1,5 @@
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
-echo "ubuntu:1q2w3e4r" | chpasswd
+echo "ubuntu:1q2w3e4r!!" | chpasswd
 service sshd reload
 curl -sL https://deb.nodesource.com/setup_14.x | bash -
 apt-get -y update

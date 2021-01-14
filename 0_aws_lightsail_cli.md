@@ -11,7 +11,7 @@ AWS CLI를 이용하여 가상머신을 설정하는 방법을 소개합니다.
 
 - 크롬 브라우저에서 바로 사용할 수 있는 웹용 터미널 프로그램(wetty)를 사용합니다.
   - [wetty](https://github.com/krishnasrinivas/wetty) 웹 기반 terminal - http://xxxx:4200
-  - 별도의 ssh용 키를 생성하지 않고 ID/Password를 사용합니다. (ID: ubuntu, Password: 1q2w3e4r)
+  - 별도의 ssh용 키를 생성하지 않고 ID/Password를 사용합니다. (ID: ubuntu, Password: 1q2w3e4r!!)
 - 전체 포트 방화벽을 오픈합니다.
 
 ## 가상 서버 생성
@@ -26,7 +26,7 @@ for i in $(seq 1); do
  aws lightsail create-instances \
    --instance-name tutorial-$(printf %02d $i) \
    --availability-zone ap-northeast-2a \
-   --blueprint-id ubuntu_18_04 \
+   --blueprint-id ubuntu_20_04 \
    --bundle-id medium_2_0 \
    --user-data file://start_script
 done
@@ -51,7 +51,7 @@ done
 for i in $(seq 1); do
  aws lightsail open-instance-public-ports \
    --instance-name tutorial-$(printf %02d $i) \
-   --port-info fromPort=0,toPort=65535,protocol=all
+   --port-info fromPort=3000,toPort=65535,protocol=TCP
 done
 ```
 

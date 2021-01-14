@@ -29,4 +29,4 @@ sudo systemctl start codeserver
 sudo systemctl enable codeserver
 ```
 
-http://xxxx:8000 접속합니다. 비밀번호는 1q2w3e4r 입니다.
+http://xxxx:8000 접속합니다. 비밀번호는 1q2w3e4r!! 입니다.

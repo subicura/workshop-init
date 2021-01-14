@@ -16,7 +16,7 @@
 IP를 할당 받았다면 크롬 브라우저에서 `http://{할당받은 IP}:4200` 으로 접속하세요.
 
 - ID: ubuntu
-- Password: 1q2w3e4r
+- Password: 1q2w3e4r!!
 
 > **주의** 비번 변경: 접속 후 `passwd` 입력
 

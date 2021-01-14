@@ -11,7 +11,7 @@ AWS 웹 콘솔에서 가상머신을 설정하는 방법을 소개합니다.
 
 - 크롬 브라우저에서 바로 사용할 수 있는 웹용 터미널 프로그램(wetty)를 사용합니다.
   - [wetty](https://github.com/krishnasrinivas/wetty) 웹 기반 terminal - http://xxxx:4200
-  - 별도의 ssh용 키를 생성하지 않고 ID/Password를 사용합니다. (ID: ubuntu, Password: 1q2w3e4r)
+  - 별도의 ssh용 키를 생성하지 않고 ID/Password를 사용합니다. (ID: ubuntu, Password: 1q2w3e4r!!)
 - 전체 포트 방화벽을 오픈합니다.
 
 ## 가상 서버 생성
@@ -33,7 +33,7 @@ AWS 웹 콘솔에서 가상머신을 설정하는 방법을 소개합니다.
 
 ```sh
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
-echo "ubuntu:1q2w3e4r" | chpasswd
+echo "ubuntu:1q2w3e4r!!" | chpasswd
 service sshd reload
 curl -sL https://deb.nodesource.com/setup_14.x | bash -
 apt-get -y update
@@ -65,7 +65,7 @@ systemctl enable wetty
 
 - Public IP의 주소로 웹 터미널에 접속합니다. (화면상으로 보면 http://52.79.247.209:4200)
 
-- ID: ubuntu, Password: 1q2w3e4r
+- ID: ubuntu, Password: 1q2w3e4r!!
 
 ## 결과화면
 

@@ -7,12 +7,12 @@ VSCode 온라인
 최소 램 2G 이상 필요
 
 ```sh
-wget https://github.com/cdr/code-server/releases/download/v3.7.2/code-server-3.7.2-linux-amd64.tar.gz
-tar xvfz code-server-3.7.2-linux-amd64.tar.gz
+wget https://github.com/cdr/code-server/releases/download/v3.8.0/code-server-3.8.0-linux-amd64.tar.gz
+tar xvfz code-server-3.8.0-linux-amd64.tar.gz
 mkdir -p ~/.config/code-server
-curl https://gist.githubusercontent.com/subicura/d7ac0cc6e662e8382e191d81c140c35b/raw/c904e8d5b3971af19e95a887cdd1bca0c916ccd8/config.yaml -o ~/.config/code-server/config.yaml
+curl https://gist.githubusercontent.com/subicura/d7ac0cc6e662e8382e191d81c140c35b/raw/d663f09e9730ab7fe7bb2dc17f7ef59d9da43d4f/config.yaml -o ~/.config/code-server/config.yaml
 mkdir ~/project
-sudo curl https://gist.githubusercontent.com/subicura/c803fd68262736d83ee67b201d87fb3c/raw/dc95e9a3e4db84a3f148cc870e640d857296e2b6/codeserver.service -o /lib/systemd/system/codeserver.service
+sudo curl https://gist.githubusercontent.com/subicura/c803fd68262736d83ee67b201d87fb3c/raw/c6370798076c989becc198901ebd0d555d2f70d9/codeserver.service -o /lib/systemd/system/codeserver.service
 sudo systemctl start codeserver
 sudo systemctl enable codeserver
 ```

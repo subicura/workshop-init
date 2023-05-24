@@ -25,7 +25,7 @@ AWS 웹 콘솔에서 가상머신을 설정하는 방법을 소개합니다.
 
 ![Create Instance](./imgs/1_create_instance.png)
 
-- Linux / Ubuntu 20.04를 선택합니다.
+- Linux / Ubuntu 22.04를 선택합니다.
 
 ![Linux Ubuntu](./imgs/2_linux_ubuntu.png)
 
@@ -35,11 +35,11 @@ AWS 웹 콘솔에서 가상머신을 설정하는 방법을 소개합니다.
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 echo "ubuntu:1q2w3e4r!!" | chpasswd
 service sshd reload
-curl -sL https://deb.nodesource.com/setup_16.x | bash -
+curl -sL https://deb.nodesource.com/setup_18.x | bash -
 apt-get -y update
 DEBIAN_FRONTEND=noninteractive apt-get -y install nodejs build-essential
 npm install -g yarn
-yarn global add wetty@2.4.0
+yarn global add wetty@2.5.0
 curl https://gist.githubusercontent.com/subicura/9058671c16e2abd36533fea2798886b0/raw/e5d249612711b14c9c8f44798dea1368395e86a9/wetty.service -o /lib/systemd/system/wetty.service
 systemctl start wetty
 systemctl enable wetty
